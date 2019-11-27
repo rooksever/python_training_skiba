@@ -1,1 +1,1 @@
-# python_training_skiba
+# repository for Python Training
