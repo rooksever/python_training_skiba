@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_training_skiba.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_training_skiba.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
@@ -13,10 +11,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UD14KpYFc7NjrX2OA8K9tMcQ3Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
@@ -92,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574945484615</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="домашнее задание 1 (первый коммит)">
+      <created>1574946454051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574946454051</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +128,7 @@
     <MESSAGE value="Создан проект PyCharm" />
     <MESSAGE value="создание тест-кейса" />
     <MESSAGE value="домашнее задание 1 (второй коммит)" />
-    <option name="LAST_COMMIT_MESSAGE" value="домашнее задание 1 (второй коммит)" />
+    <MESSAGE value="домашнее задание 1 (первый коммит)" />
+    <option name="LAST_COMMIT_MESSAGE" value="домашнее задание 1 (первый коммит)" />
   </component>
 </project>
