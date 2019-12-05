@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="задание 4">
+    <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/group_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +35,11 @@
       <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba\test" />
+      <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba\fixture" />
+      <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba\model" />
       <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba" />
       <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba\env" />
-      <recent name="C:\Users\eskiba\PycharmProjects\python_training_skiba\env\tcl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -50,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="Contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_training_skiba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python.application" />
         <item itemvalue="Python tests.Unittests in test_add_group.py" />
         <item itemvalue="Python.Contact" />
@@ -284,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575559690595</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Созданы пакеты для разных зон ответственности">
+      <created>1575562951261</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575562951261</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +325,7 @@
     <MESSAGE value="Вынос wd выше" />
     <MESSAGE value="вынос вспомогательных методов в application" />
     <MESSAGE value="задание 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 4" />
+    <MESSAGE value="Созданы пакеты для разных зон ответственности" />
+    <option name="LAST_COMMIT_MESSAGE" value="Созданы пакеты для разных зон ответственности" />
   </component>
 </project>
