@@ -295,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575562951261</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Выделен класс для управления сессиями">
+      <created>1575564385548</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1575564385548</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,6 +333,7 @@
     <MESSAGE value="вынос вспомогательных методов в application" />
     <MESSAGE value="задание 4" />
     <MESSAGE value="Созданы пакеты для разных зон ответственности" />
-    <option name="LAST_COMMIT_MESSAGE" value="Созданы пакеты для разных зон ответственности" />
+    <MESSAGE value="Выделен класс для управления сессиями" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выделен класс для управления сессиями" />
   </component>
 </project>
