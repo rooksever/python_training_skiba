@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="">
+    <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="вынос вспомогательных методов в application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
     <configuration name="Contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_training_skiba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="group" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="application" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_training_skiba" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,7 +86,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/group.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/application.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,12 +124,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_training_skiba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_add_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in test_add_group.py" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
+        <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python.application" />
+        <item itemvalue="Python tests.Unittests in test_add_group.py" />
         <item itemvalue="Python.Contact" />
-        <item itemvalue="Python.group" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575483434730</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="вынос вспомогательных методов в application">
+      <created>1575484498171</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575484498171</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +307,7 @@
     <MESSAGE value="Задание #3" />
     <MESSAGE value="Задание 3, попытка 2" />
     <MESSAGE value="Вынос wd выше" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынос wd выше" />
+    <MESSAGE value="вынос вспомогательных методов в application" />
+    <option name="LAST_COMMIT_MESSAGE" value="вынос вспомогательных методов в application" />
   </component>
 </project>
