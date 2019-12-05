@@ -3,6 +3,7 @@ from selenium.webdriver.support.select import Select
 class ContactHelper:
 
     def __init__(self, app):
+        self.accept_next_alert = True
         self.app = app
 
     def add(self, contact):
@@ -100,3 +101,48 @@ class ContactHelper:
         # go to home page
         wd.find_element_by_link_text("home").click()
 
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
+        self.assertRegexpMatches(self.close_alert_and_get_its_text(), r"^Delete 1 addresses[\s\S]$")
+        # go to home page
+        wd.find_element_by_link_text("home").click()
+
+    def edit(self, contact):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_xpath("(//img[@alt='Edit'])[2]").click()
+        # fill Name form
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contact.first_name)
+        wd.find_element_by_name("middlename").click()
+        wd.find_element_by_name("middlename").clear()
+        wd.find_element_by_name("middlename").send_keys(contact.middle_name)
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contact.last_name)
+        # submit contact edit
+        wd.find_element_by_name("update").click()
+        # go to home page
+        wd.find_element_by_link_text("home").click()
+
+    def assertRegexpMatches(self, Yes, No):
+        pass
+
+    def close_alert_and_get_its_text(self):
+        try:
+            alert = self.app.switch_to_alert()
+            alert_text = alert.text
+            if self.accept_next_alert:
+                alert.accept()
+            else:
+                alert.dismiss()
+            return alert_text
+        finally:
+            pass
