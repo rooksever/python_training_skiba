@@ -146,3 +146,5 @@ class ContactHelper:
             return alert_text
         finally:
             pass
+
+
