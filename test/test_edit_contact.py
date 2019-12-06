@@ -8,4 +8,5 @@ def test_add_contact(app):
                             notes=""))
     app.session.logout()
 
-    
+
+

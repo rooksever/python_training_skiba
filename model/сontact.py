@@ -24,3 +24,5 @@ class Contact:
         self.address_2 = address_2
         self.phone_2 = phone_2
         self.notes =notes
+
+

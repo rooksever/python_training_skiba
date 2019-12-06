@@ -1,3 +1,5 @@
+from selenium.common.exceptions import NoAlertPresentException
+from selenium.webdriver.common import alert
 from selenium.webdriver.support.select import Select
 
 class ContactHelper:
@@ -102,16 +104,6 @@ class ContactHelper:
         wd.find_element_by_link_text("home").click()
 
 
-    def delete_first_contact(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
-        wd.find_element_by_name("selected[]").click()
-        # submit deletion
-        wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
-        self.assertRegexpMatches(self.close_alert_and_get_its_text(), r"^Delete 1 addresses[\s\S]$")
-        # go to home page
-        wd.find_element_by_link_text("home").click()
-
     def edit(self, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
@@ -132,19 +124,15 @@ class ContactHelper:
         # go to home page
         wd.find_element_by_link_text("home").click()
 
-    def assertRegexpMatches(self, Yes, No):
-        pass
-
-    def close_alert_and_get_its_text(self):
+    def delete_first_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
         try:
-            alert = self.app.switch_to_alert()
-            alert_text = alert.text
-            if self.accept_next_alert:
-                alert.accept()
-            else:
-                alert.dismiss()
-            return alert_text
+            alert = wd.switch_to_alert()
+            alert.accept()
         finally:
             pass
-
 
