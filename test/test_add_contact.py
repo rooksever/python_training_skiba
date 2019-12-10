@@ -10,5 +10,3 @@ def test_add_contact(app):
                             notes="ghjhgjghjh hgjghjghjjhg hgjhgjhgf"))
     app.session.logout()
 
-
-
