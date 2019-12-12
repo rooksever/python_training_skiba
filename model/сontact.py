@@ -8,12 +8,12 @@ class Contact:
         self.company = company
         self.address = address
         self.home = home
-        self.mobile_phone = mobile_phone
-        self.work_phone = work_phone
+        self.mobile = mobile_phone
+        self.work = work_phone
         self.fax = fax
-        self.email_1 = email_1
-        self.email_2 = email_2
-        self.email_3 = email_3
+        self.email = email_1
+        self.email2 = email_2
+        self.email3 = email_3
         self.homepage = homepage
         self.birth_day = birth_day
         self.birth_mon = birth_mon
@@ -21,6 +21,6 @@ class Contact:
         self.anniversary_day = anniversary_day
         self.anniversary_mon = anniversary_mon
         self.anniversary_year = anniversary_year
-        self.address_2 = address_2
-        self.phone_2 = phone_2
+        self.address2 = address_2
+        self.phone2 = phone_2
         self.notes = notes

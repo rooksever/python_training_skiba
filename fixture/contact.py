@@ -10,6 +10,8 @@ class ContactHelper:
 
     def add(self, Contact):
         wd = self.app.wd
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+           wd.find_element_by_link_text("home").click()
         # init contact creation
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(Contact)
@@ -31,7 +33,8 @@ class ContactHelper:
 
     def edit(self, new_contact_data):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+           wd.find_element_by_link_text("home").click()
         self.select_first_contact()
         # open edit form
         wd.find_element_by_xpath("(//img[@alt='Edit'])").click()
@@ -44,7 +47,8 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+           wd.find_element_by_link_text("home").click()
         self.select_first_contact()
         # submit deletion
         wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
@@ -84,15 +88,15 @@ class ContactHelper:
 
     def add_phones(self, contact):
         wd = self.app.wd
-        self.type("mobile_phone", contact.mobile_phone)
-        self.type("work_phone", contact.work_phone)
+        self.type("mobile", contact.mobile)
+        self.type("work", contact.work)
         self.type("fax", contact.fax)
 
     def add_emails(self, contact):
         wd = self.app.wd
-        self.type("email_1", contact.email_1)
-        self.type("email_2", contact.email_2)
-        self.type("email_3", contact.email_3)
+        self.type("email", contact.email)
+        self.type("email2", contact.email2)
+        self.type("email3", contact.email3)
 
     def add_homepade(self, contact):
         wd = self.app.wd
@@ -134,13 +138,14 @@ class ContactHelper:
 
     def add_info(self, contact):
         wd = self.app.wd
-        self.type("address_2", contact.address_2)
-        self.type("phone_2", contact.phone_2)
+        self.type("address2", contact.address2)
+        self.type("phone2", contact.phone2)
         self.type("notes", contact.notes)
 
     def count_contacts(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+           wd.find_element_by_link_text("home").click()
         return len(wd.find_elements_by_name("selected[]"))
 
 
