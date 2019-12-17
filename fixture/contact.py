@@ -10,8 +10,7 @@ class ContactHelper:
 
     def add(self, Contact):
         wd = self.app.wd
-        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
-           wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
         # init contact creation
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(Contact)
@@ -33,8 +32,7 @@ class ContactHelper:
 
     def edit(self, new_contact_data):
         wd = self.app.wd
-        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
-           wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
         self.select_first_contact()
         # open edit form
         wd.find_element_by_xpath("(//img[@alt='Edit'])").click()
@@ -47,8 +45,7 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
-           wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
         self.select_first_contact()
         # submit deletion
         wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
@@ -144,9 +141,13 @@ class ContactHelper:
 
     def count_contacts(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
-           wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def open_contacts_page(self):
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+            wd.find_element_by_link_text("home").click()
+
 
 
 
