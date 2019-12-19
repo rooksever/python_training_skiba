@@ -1,5 +1,5 @@
 from selenium.webdriver.support.select import Select
-from model.сontact import Contact
+from b
 
 
 class ContactHelper:
@@ -145,8 +145,28 @@ class ContactHelper:
         return len(wd.find_elements_by_name("selected[]"))
 
     def open_contacts_page(self):
+        wd = self.app.wd
         if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
             wd.find_element_by_link_text("home").click()
+
+    def get_contacts_list(self):
+        wd = self.app.wd
+        self.open_contacts_page()
+        contacts = []
+        requiredhtml = wd.page_source
+        contacts_page = BeautifulSoup(requiredhtml, 'html5lib')
+        table = contacts_page.findChildren('table')
+        my_table = table[0]
+        rows = my_table.findChildren(['th', 'tr'])
+        for row in rows:
+            cells = row.findChildren('td')
+            for cell in cells:
+                value = cell.text
+                return value
+
+            contacts.append(value)
+        return contacts
+
 
 
 

@@ -85,7 +85,7 @@ class GroupHelper:
         groups = []
         # to check elements on page use: $$('css_selector_name(span.group)_') in Console folder of page inspector
         for element in wd.find_elements_by_css_selector("span.group"):
-            text = element.get_text()
+            text = element.text
             id = element.find_element_by_name("selected[]").get_attribute("value")
             groups.append(Group(name=text, id=id))
         return groups
