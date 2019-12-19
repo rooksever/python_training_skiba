@@ -1,5 +1,6 @@
 from selenium.webdriver.support.select import Select
-from b
+
+from model.сontact import Contact
 
 
 class ContactHelper:
@@ -153,18 +154,15 @@ class ContactHelper:
         wd = self.app.wd
         self.open_contacts_page()
         contacts = []
-        requiredhtml = wd.page_source
-        contacts_page = BeautifulSoup(requiredhtml, 'html5lib')
-        table = contacts_page.findChildren('table')
-        my_table = table[0]
-        rows = my_table.findChildren(['th', 'tr'])
-        for row in rows:
-            cells = row.findChildren('td')
-            for cell in cells:
-                value = cell.text
-                return value
-
-            contacts.append(value)
+        for element in wd.find_elements_by_css_selector("tr[name=entry]"):
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            for last in range(0,1):
+                last = element.find_elements_by_css_selector("td")
+                return last
+            for first in range(1, 2):
+                first = element.find_elements_by_css_selector("td")
+                return first
+            contacts.append(Contact(id=id, last_name=last, first_name=first))
         return contacts
 
 
