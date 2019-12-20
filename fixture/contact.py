@@ -155,14 +155,11 @@ class ContactHelper:
         self.open_contacts_page()
         contacts = []
         for element in wd.find_elements_by_css_selector("tr[name=entry]"):
+            mylist = []
+            cell_value = element.find_elements_by_css_selector("td")
+            mylist.append(cell_value)
             id = element.find_element_by_name("selected[]").get_attribute("value")
-            for last in range(0,1):
-                last = element.find_elements_by_css_selector("td")
-                return last
-            for first in range(1, 2):
-                first = element.find_elements_by_css_selector("td")
-                return first
-            contacts.append(Contact(id=id, last_name=last, first_name=first))
+        contacts.append(Contact(id=id, last_name=mylist[2], first_name=mylist[3]))
         return contacts
 
 
