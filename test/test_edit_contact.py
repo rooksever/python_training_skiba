@@ -14,5 +14,3 @@ def test_edit_contact(app):
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
 
-
-
