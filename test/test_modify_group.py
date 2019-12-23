@@ -16,3 +16,4 @@ def test_modify_first_group_name(app):
 #    app.group.modify_first_group(Group(footer="New footer"))
  #   new_groups = app.group.get_group_list()
  #   assert len(old_groups) == len(new_groups)
+
