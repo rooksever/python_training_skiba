@@ -6,50 +6,59 @@ from model.сontact import Contact
 class ContactHelper:
 
     def __init__(self, app):
-        self.group_cache = None
         self.accept_next_alert = True
         self.app = app
+        self.group_cache = None
 
-    def add(self, Contact):
+    def add(self, contact):
         wd = self.app.wd
         self.open_contacts_page()
         # init contact creation
         wd.find_element_by_link_text("add new").click()
-        self.fill_contact_form(Contact)
+        self.fill_contact_form(contact)
         # submit form
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         # go to home page
-        wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
+        self.group_cache = None
 
-    def fill_contact_form(self, Contact):
+    def fill_contact_form(self, contact):
         wd = self.app.wd
-        self.fill_contact(Contact)
-        self.fill_addresses(Contact)
-        self.add_phones(Contact)
-        self.add_emails(Contact)
-        self.add_homepade(Contact)
-        self.birthday(Contact)
-        self.anniversary(Contact)
-        self.add_info(Contact)
+        self.fill_contact(contact)
+        self.fill_addresses(contact)
+        self.add_phones(contact)
+        self.add_emails(contact)
+        self.add_homepade(contact)
+        self.birthday(contact)
+        self.anniversary(contact)
+        self.add_info(contact)
 
-    def edit(self, new_contact_data):
+    def edit(self):
+        self.edit_contact_by_index(0)
+
+    def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_contacts_page()
-        self.select_first_contact()
-        # open edit form
-        wd.find_element_by_xpath("(//img[@alt='Edit'])").click()
-        # fill edit info
+        self.select_contact_by_index_edit(index)
         self.fill_contact_form(new_contact_data)
         # submit contact edit
         wd.find_element_by_name("update").click()
         # go to home page
-        wd.find_element_by_link_text("home").click()
+        self.open_contacts_page()
         self.group_cache = None
 
-    def delete_first_contact(self):
+    def select_contact_by_index_edit(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_xpath("(//img[@alt='Edit'])")[index].click()
+
+    def select_contact_by_index_delete(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.open_contacts_page()
-        self.select_first_contact()
+        self.select_contact_by_index_delete(index)
         # submit deletion
         wd.find_element_by_xpath("(//input[@value='Delete'])[@type='button']").click()
         try:
@@ -57,7 +66,11 @@ class ContactHelper:
             alert.accept()
         finally:
             pass
+        self.open_contacts_page()
         self.group_cache = None
+
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
 
     def select_first_contact(self):
         wd = self.app.wd
@@ -69,7 +82,7 @@ class ContactHelper:
         self.type("middlename", contact.middle_name)
         self.type("lastname", contact.last_name)
 
-    def type(self, field_name,  text):
+    def type(self, field_name, text):
         wd = self.app.wd
         if text is not None:
             wd.find_element_by_name(field_name).click()
@@ -122,7 +135,7 @@ class ContactHelper:
 
     def anniversary(self, contact):
         wd = self.app.wd
-        if contact.anniversary_day is  not None:
+        if contact.anniversary_day is not None:
             wd.find_element_by_name("aday").click()
             Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.anniversary_day)
             wd.find_element_by_xpath(
@@ -143,20 +156,20 @@ class ContactHelper:
         self.type("phone2", contact.phone2)
         self.type("notes", contact.notes)
 
-    def count_contacts(self):
-        wd = self.app.wd
-        self.open_contacts_page()
-        return len(wd.find_elements_by_name("selected[]"))
-
     def open_contacts_page(self):
         wd = self.app.wd
         if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
             wd.find_element_by_link_text("home").click()
 
+    def count_contacts(self):
+        wd = self.app.wd
+        self.open_contacts_page()
+        return len(wd.find_elements_by_name("selected[]"))
+
     contact_cache = None
 
     def get_contacts_list(self):
-        if self.contact_cache is None:
+        if self.group_cache is None:
             wd = self.app.wd
             self.open_contacts_page()
             self.contact_cache = []
@@ -167,7 +180,3 @@ class ContactHelper:
                 first_name = cell_value[2].text
                 self.contact_cache.append(Contact(contact_id=int(id), last_name=last_name, first_name=first_name))
         return list(self.contact_cache)
-
-
-
-
