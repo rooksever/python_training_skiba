@@ -8,7 +8,7 @@ class ContactHelper:
     def __init__(self, app):
         self.accept_next_alert = True
         self.app = app
-        self.group_cache = None
+
 
     def add(self, contact):
         wd = self.app.wd
@@ -20,7 +20,7 @@ class ContactHelper:
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         # go to home page
         self.open_contacts_page()
-        self.group_cache = None
+        self.contact_cache = None
 
     def fill_contact_form(self, contact):
         wd = self.app.wd
@@ -45,7 +45,7 @@ class ContactHelper:
         wd.find_element_by_name("update").click()
         # go to home page
         self.open_contacts_page()
-        self.group_cache = None
+        self.contact_cache = None
 
     def select_contact_by_index_edit(self, index):
         wd = self.app.wd
@@ -67,7 +67,7 @@ class ContactHelper:
         finally:
             pass
         self.open_contacts_page()
-        self.group_cache = None
+        self.contact_cache = None
 
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
@@ -169,7 +169,7 @@ class ContactHelper:
     contact_cache = None
 
     def get_contacts_list(self):
-        if self.group_cache is None:
+        if self.contact_cache is None:
             wd = self.app.wd
             self.open_contacts_page()
             self.contact_cache = []
