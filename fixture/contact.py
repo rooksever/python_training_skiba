@@ -179,8 +179,10 @@ class ContactHelper:
                 last_name = cell_value[1].text
                 first_name = cell_value[2].text
                 all_phones = cell_value[5].text
+                all_emails = cell_value[4].text
                 self.contact_cache.append(Contact(contact_id=int(id), last_name=last_name, first_name=first_name,
-                                                  all_phones_from_home_page=all_phones))
+                                                  all_phones_from_home_page=all_phones,
+                                                  all_emails_from_home_page=all_emails))
         return list(self.contact_cache)
 
     def open_contact_to_edit_by_index(self, index):
@@ -207,8 +209,13 @@ class ContactHelper:
         mobile = wd.find_element_by_name("mobile").get_attribute("value")
         work = wd.find_element_by_name("work").get_attribute("value")
         phone2 = wd.find_element_by_name("phone2").get_attribute("value")
+        address = wd.find_element_by_name("address").get_attribute("value")
+        email = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
         return Contact(first_name=first_name, last_name=last_name, contact_id=id,
-                       home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2)
+                       home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, address=address, email_1=email,
+                       email_2=email2, email_3=email3)
 
     def get_contact_from_view_page(self, index):
         wd = self.app.wd
@@ -218,4 +225,12 @@ class ContactHelper:
         work = re.search("W: (.*)", text).group(1)
         mobile = re.search("M: (.*)", text).group(1)
         phone2 = re.search("P: (.*)", text).group(1)
-        return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2)
+        email = wd.find_element_by_css_selector("#content > a:nth-child(10)").text
+        email2 = wd.find_element_by_css_selector("#content > a:nth-child(12)").text
+        email3 = wd.find_element_by_css_selector("#content > a:nth-child(14)").text
+        fullname = wd.find_element_by_css_selector("#content > b").text
+        page = wd.find_element_by_css_selector("#content").text
+        acontent = re.split('\n', page)
+        address = acontent[1]
+        return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, address=address, email_1=email,
+                       email_2=email2, email_3=email3, fullname=fullname)
