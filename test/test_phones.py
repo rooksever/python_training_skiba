@@ -27,3 +27,5 @@ def test_phones_on_contact_view_page(app):
     assert contact_from_view_page.phone2 == contact_from_edit_page.phone2
 
 
+
+

@@ -203,7 +203,9 @@ class ContactHelper:
         wd = self.app.wd
         self.open_contact_to_edit_by_index(index)
         first_name = wd.find_element_by_name("firstname").get_attribute("value")
+        middle_name = wd.find_element_by_name("middlename").get_attribute("value")
         last_name = wd.find_element_by_name("lastname").get_attribute("value")
+        fullname = str(first_name + ' ' +middle_name + ' ' + last_name)
         id = wd.find_element_by_name("id").get_attribute("value")
         home = wd.find_element_by_name("home").get_attribute("value")
         mobile = wd.find_element_by_name("mobile").get_attribute("value")
@@ -213,9 +215,9 @@ class ContactHelper:
         email = wd.find_element_by_name("email").get_attribute("value")
         email2 = wd.find_element_by_name("email2").get_attribute("value")
         email3 = wd.find_element_by_name("email3").get_attribute("value")
-        return Contact(first_name=first_name, last_name=last_name, contact_id=id,
+        return Contact(first_name=first_name, middle_name=middle_name, last_name=last_name, contact_id=id,
                        home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, address=address, email_1=email,
-                       email_2=email2, email_3=email3)
+                       email_2=email2, email_3=email3, fullname=fullname)
 
     def get_contact_from_view_page(self, index):
         wd = self.app.wd
@@ -229,8 +231,8 @@ class ContactHelper:
         email2 = wd.find_element_by_css_selector("#content > a:nth-child(12)").text
         email3 = wd.find_element_by_css_selector("#content > a:nth-child(14)").text
         fullname = wd.find_element_by_css_selector("#content > b").text
-        page = wd.find_element_by_css_selector("#content").text
-        acontent = re.split('\n', page)
-        address = acontent[1]
-        return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, address=address, email_1=email,
+        #page = wd.find_element_by_css_selector("#content").text
+        #acontent = re.split('\n', page)
+        #address = acontent[1]
+        return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, email_1=email,
                        email_2=email2, email_3=email3, fullname=fullname)
