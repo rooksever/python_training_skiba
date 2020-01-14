@@ -231,8 +231,8 @@ class ContactHelper:
         email2 = wd.find_element_by_css_selector("#content > a:nth-child(12)").text
         email3 = wd.find_element_by_css_selector("#content > a:nth-child(14)").text
         fullname = wd.find_element_by_css_selector("#content > b").text
-        #page = wd.find_element_by_css_selector("#content").text
-        #acontent = re.split('\n', page)
-        #address = acontent[1]
+        page = wd.find_element_by_css_selector("#content").text
+        acontent = re.split('\n', page)
+        address = acontent[2]
         return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, email_1=email,
-                       email_2=email2, email_3=email3, fullname=fullname)
+                       email_2=email2, email_3=email3, fullname=fullname, address=address)

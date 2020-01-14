@@ -33,3 +33,4 @@ def test_info_on_contact_view_page(app):
     assert contact_from_view_page.email2 == contact_from_edit_page.email2
     assert contact_from_view_page.email3 == contact_from_edit_page.email3
     assert contact_from_view_page.fullname == contact_from_edit_page.fullname
+    assert contact_from_view_page.address == contact_from_edit_page.address
