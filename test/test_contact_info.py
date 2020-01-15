@@ -24,6 +24,10 @@ def test_info_on_home_page(app):
     emails = contact_from_home_page.all_emails_from_home_page
     e = clear(emails)
     assert e == merge_emails_like_on_home_page(contact_from_edit_page)
+    assert contact_from_home_page.first_name == contact_from_edit_page.first_name
+    assert contact_from_home_page.last_name == contact_from_edit_page.last_name
+    assert contact_from_home_page.address == contact_from_edit_page.address
+
 
 
 def test_info_on_contact_view_page(app):
@@ -33,4 +37,5 @@ def test_info_on_contact_view_page(app):
     assert contact_from_view_page.email2 == contact_from_edit_page.email2
     assert contact_from_view_page.email3 == contact_from_edit_page.email3
     assert contact_from_view_page.fullname == contact_from_edit_page.fullname
-    assert contact_from_view_page.address == contact_from_edit_page.address
+
+
