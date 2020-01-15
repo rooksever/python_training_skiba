@@ -2,6 +2,7 @@ from selenium.webdriver.support.select import Select
 
 from model.сontact import Contact
 import re
+import random
 
 
 class ContactHelper:
@@ -132,6 +133,23 @@ class ContactHelper:
             wd.find_element_by_name("byear").click()
             wd.find_element_by_name("byear").clear()
             wd.find_element_by_name("byear").send_keys(contact.birth_year)
+
+    def random_birthday(self, contact):
+        wd = self.app.wd
+        if contact.birth_day is not None:
+            wd.find_element_by_name("bday").click()
+            Select(wd.find_element_by_name("bday")).select_by_visible_text(random.randint(1, 31))
+            wd.find_element_by_xpath(
+                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[18]").click()
+        if contact.birth_mon is not None:
+            wd.find_element_by_name("bmonth").click()
+            Select(wd.find_element_by_name("bmonth")).select_by_visible_text(random.randint(1, 12))
+        if contact.birth_year is not None:
+            wd.find_element_by_xpath(
+                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[46]").click()
+            wd.find_element_by_name("byear").click()
+            wd.find_element_by_name("byear").clear()
+            wd.find_element_by_name("byear").send_keys(random.randint(1910, 2020))
 
     def anniversary(self, contact):
         wd = self.app.wd
