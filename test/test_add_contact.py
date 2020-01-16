@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from selenium.webdriver.support.select import Select
 
 from model.сontact import Contact
 import pytest
@@ -27,7 +26,7 @@ testdata = [Contact(first_name=random_string("first_name", 15), middle_name=rand
                     mobile_phone=random_number("mobile_phone", 10), work_phone=random_number("work_phone", 10),
                     fax=random_number("fax", 10), email_1=random_string("email_1", 15),
                     email_2=random_string("email_2", 15), email_3=random_string("email_3", 15),
-                    homepage=random_string("homepage", 20), random_birthday=random.randint(1,30),
+                    homepage=random_string("homepage", 20), birth_day=random.randint(1, 12), birth_mon=random.randint(1, 12),
                     birth_year=random.randint(1910, 2020), anniversary_day=random.randint(1, 30),
                     anniversary_mon=random.randint(1, 12), anniversary_year=random.randint(1910, 2020),
                     address_2=random_string("address_2", 40), phone_2=random_number("phone_2", 10),

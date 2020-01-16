@@ -119,37 +119,20 @@ class ContactHelper:
 
     def birthday(self, contact):
         wd = self.app.wd
-        if contact.birth_day is not None:
-            wd.find_element_by_name("bday").click()
-            Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.birth_day)
-            wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[18]").click()
-        if contact.birth_mon is not None:
-            wd.find_element_by_name("bmonth").click()
-            Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.birth_mon)
-        if contact.birth_year is not None:
-            wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[46]").click()
-            wd.find_element_by_name("byear").click()
-            wd.find_element_by_name("byear").clear()
-            wd.find_element_by_name("byear").send_keys(contact.birth_year)
+        wd.find_element_by_name("bday").click()
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(str(random.randint(1, 31)))
+        wd.find_element_by_name("bmonth").click()
+        monthlist = []
+        for element in wd.find_elements_by_css_selector("bmonth"):
+            month = element.find_element_by_name("option").get_attribute(value)
+            monthlist.append(month)
 
-    def random_birthday(self, contact):
-        wd = self.app.wd
-        if contact.birth_day is not None:
-            wd.find_element_by_name("bday").click()
-            Select(wd.find_element_by_name("bday")).select_by_visible_text(random.randint(1, 31))
-            wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[18]").click()
-        if contact.birth_mon is not None:
-            wd.find_element_by_name("bmonth").click()
-            Select(wd.find_element_by_name("bmonth")).select_by_visible_text(random.randint(1, 12))
-        if contact.birth_year is not None:
-            wd.find_element_by_xpath(
+        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(str(random.choice(monthlist)))
+        wd.find_element_by_xpath(
                 "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[46]").click()
-            wd.find_element_by_name("byear").click()
-            wd.find_element_by_name("byear").clear()
-            wd.find_element_by_name("byear").send_keys(random.randint(1910, 2020))
+        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").clear()
+        wd.find_element_by_name("byear").send_keys(random.randint(1910, 2020))
 
     def anniversary(self, contact):
         wd = self.app.wd
