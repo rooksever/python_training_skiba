@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_contact_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_contact_info.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_add_contact.test_add_contact">
+  <component name="RunManager" selected="Python tests.pytest in test_contact_info.py">
     <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_training_skiba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,21 +106,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_contact_info.test_info_on_home_page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="python_training_skiba" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_contact_info.test_info_on_home_page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest in test_add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training_skiba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,13 +121,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_contact_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_training_skiba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_contact_info.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_add_contact.test_add_contact" />
+        <item itemvalue="Python tests.pytest in test_contact_info.py" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python.contact" />
+        <item itemvalue="Python tests.pytest for test_add_contact.test_add_contact" />
         <item itemvalue="Python tests.pytest for test_add_group.test_add_group" />
-        <item itemvalue="Python tests.pytest for test_contact_info.test_info_on_home_page" />
       </list>
     </recent_temporary>
   </component>
@@ -157,27 +156,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574876159769</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Улучшено описание репозитория">
-      <created>1574876386940</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1574876386940</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Создан проект PyCharm">
-      <created>1574876426635</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1574876426635</updated>
-    </task>
-    <task id="LOCAL-00003" summary="создание тест-кейса">
-      <created>1574879204595</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1574879204595</updated>
     </task>
     <task id="LOCAL-00004" summary="домашнее задание 1 (второй коммит)">
       <created>1574945484615</created>
@@ -501,7 +479,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579112678011</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="16,01 temp">
+      <created>1579193370467</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1579193370468</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Задание15">
+      <created>1579271133946</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1579271133946</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Задание15">
+      <created>1579271200946</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1579271200946</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,8 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Задание 6" />
-    <MESSAGE value="Задание 7 ver 1" />
     <MESSAGE value="Задание 7 ver 2 (без теста на удаление группы)" />
     <MESSAGE value="Задание 7" />
     <MESSAGE value="Задание 7(1 - вынесены методы заполнения контактов)" />
@@ -543,6 +540,8 @@
     <MESSAGE value="Задание 14. Осилить проверку адреса не вышло." />
     <MESSAGE value="Задание 14." />
     <MESSAGE value="15,01 temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="15,01 temp" />
+    <MESSAGE value="16,01 temp" />
+    <MESSAGE value="Задание15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание15" />
   </component>
 </project>
