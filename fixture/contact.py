@@ -231,3 +231,5 @@ class ContactHelper:
         address = acontent[2]
         return Contact(home=home, mobile_phone=mobile, work_phone=work, phone_2=phone2, email_1=email,
                        email_2=email2, email_3=email3, fullname=fullname, address=address)
+
+    
