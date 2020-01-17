@@ -122,34 +122,27 @@ class ContactHelper:
         wd.find_element_by_name("bday").click()
         Select(wd.find_element_by_name("bday")).select_by_visible_text(str(random.randint(1, 31)))
         wd.find_element_by_name("bmonth").click()
-        monthlist = []
-        for element in wd.find_elements_by_css_selector("bmonth"):
-            month = element.find_element_by_name("option").get_attribute(value)
-            monthlist.append(month)
-
+        monthlist = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+                     "November", "December"]
         Select(wd.find_element_by_name("bmonth")).select_by_visible_text(str(random.choice(monthlist)))
-        wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[46]").click()
+        wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(random.randint(1910, 2020))
 
     def anniversary(self, contact):
         wd = self.app.wd
-        if contact.anniversary_day is not None:
-            wd.find_element_by_name("aday").click()
-            Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.anniversary_day)
-            wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[12]").click()
-        if contact.anniversary_mon is not None:
-            wd.find_element_by_name("amonth").click()
-            Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.anniversary_mon)
-            wd.find_element_by_xpath(
-                "(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[41]").click()
-        if contact.anniversary_year is not None:
-            wd.find_element_by_name("ayear").click()
-            wd.find_element_by_name("ayear").clear()
-            wd.find_element_by_name("ayear").send_keys(contact.anniversary_year)
+        wd.find_element_by_name("aday").click()
+        Select(wd.find_element_by_name("aday")).select_by_visible_text(str(random.randint(1, 31)))
+        wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])").click()
+        wd.find_element_by_name("amonth").click()
+        monthlist = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+                     "November", "December"]
+        Select(wd.find_element_by_name("amonth")).select_by_visible_text(str(random.choice(monthlist)))
+        wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])").click()
+        wd.find_element_by_name("ayear").click()
+        wd.find_element_by_name("ayear").clear()
+        wd.find_element_by_name("ayear").send_keys(random.randint(1910, 2020))
 
     def add_info(self, contact):
         wd = self.app.wd
