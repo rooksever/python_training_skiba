@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1dddd89-6401-4dbe-9cc3-3358e0f59876" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_contact_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_contact_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_del_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_del_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +116,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;--browser\u003dchrome&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_contact.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
@@ -136,6 +136,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.contact" />
+      <item itemvalue="Python tests.pytest for test_add_contact.test_add_contact" />
+      <item itemvalue="Python tests.pytest for test_add_group.test_add_group" />
+      <item itemvalue="Python tests.pytest in test_add_contact.py" />
+      <item itemvalue="Python tests.pytest in test_contact_info.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_contact_info.py" />
@@ -156,27 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574876159769</updated>
-    </task>
-    <task id="LOCAL-00004" summary="домашнее задание 1 (второй коммит)">
-      <created>1574945484615</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1574945484615</updated>
-    </task>
-    <task id="LOCAL-00005" summary="домашнее задание 1 (первый коммит)">
-      <created>1574946454051</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1574946454051</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Выделены вспомогательные методы и классы">
-      <created>1574952198184</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1574952198184</updated>
     </task>
     <task id="LOCAL-00007" summary="Выделены вспомогательные методы и классы">
       <created>1574952615156</created>
@@ -500,7 +486,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579271200946</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Задание14">
+      <created>1579271413650</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1579271413650</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Задание16">
+      <created>1579537040471</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1579537040472</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Задание14(попытка 5)">
+      <created>1579537213141</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1579537213141</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -517,9 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Задание 7 ver 2 (без теста на удаление группы)" />
-    <MESSAGE value="Задание 7" />
-    <MESSAGE value="Задание 7(1 - вынесены методы заполнения контактов)" />
     <MESSAGE value="Задание 7(ver.2)" />
     <MESSAGE value="10.12 temp" />
     <MESSAGE value="Задание 7 (выровнены отступы)" />
@@ -542,6 +546,9 @@
     <MESSAGE value="15,01 temp" />
     <MESSAGE value="16,01 temp" />
     <MESSAGE value="Задание15" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание15" />
+    <MESSAGE value="Задание14" />
+    <MESSAGE value="Задание16" />
+    <MESSAGE value="Задание14(попытка 5)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание14(попытка 5)" />
   </component>
 </project>
