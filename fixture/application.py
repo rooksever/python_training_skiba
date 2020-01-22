@@ -15,7 +15,7 @@ class Application:
             self.wd = webdriver.Ie()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
-        self.wd = webdriver.Firefox()
+        #self.wd = webdriver.Firefox()
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
@@ -28,19 +28,10 @@ class Application:
         except:
             return False
 
-
-
     def open_home_page(self):
         wd = self.wd
+
         wd.get(self.base_url)
-
-
 
     def destroy(self):
         self.wd.quit()
-
-
-
-
-
-

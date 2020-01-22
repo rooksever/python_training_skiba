@@ -8,7 +8,7 @@ import random
 class ContactHelper:
 
     def __init__(self, app):
-        self.accept_next_alert = True
+        #self.accept_next_alert = True
         self.app = app
 
     def add(self, contact):
