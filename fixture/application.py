@@ -21,11 +21,12 @@ class Application:
         self.base_url = base_url
 
     def is_valid(self):
+        print(123)
         try:
-            self.wd.current_url()
+            self.wd.current_url
             return True
-        except:
-            return False
+        except Exception as e:
+            print(e)
 
     def open_home_page(self):
         wd = self.wd
