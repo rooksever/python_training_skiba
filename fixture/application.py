@@ -21,7 +21,6 @@ class Application:
         self.base_url = base_url
 
     def is_valid(self):
-        print(123)
         try:
             self.wd.current_url
             return True
