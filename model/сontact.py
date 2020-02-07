@@ -6,7 +6,7 @@ class Contact:
                  email_3=None, homepage=None, birth_day=None, birth_mon=None, birth_year=None, anniversary_day=None,
                  anniversary_mon=None, anniversary_year=None, address_2=None, phone_2=None, notes=None,
                  all_phones_from_home_page=None, all_emails_from_home_page=None, fullname=None, contact_id=None,
-                 random_birthday = None):
+                 random_birthday=None):
         self.first_name = first_name
         self.middle_name = middle_name
         self.last_name = last_name
