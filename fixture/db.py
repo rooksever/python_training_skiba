@@ -4,7 +4,6 @@ from model.group import Group
 from model.сontact import Contact
 
 
-
 class DbFixture:
 
     def __init__(self, host, name, user, password):
@@ -37,7 +36,6 @@ class DbFixture:
         finally:
             cursor.close()
         return list
-
 
     def destroy(self):
         self.connection.close()
